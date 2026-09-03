@@ -1,0 +1,29 @@
+{
+  "name": "tpcw-quant",
+  "displayName": "tpcw-quant",
+  "version": "0.1.0",
+  "description": "Parent skill for Atlas long-term portfolio research and Bayes mid/short bot research. Routes to LLMQuant workflow files. Not live trading.",
+  "author": {
+    "name": "tpcw-dev",
+    "url": "https://github.com/tpcw-dev/tpcw-quant"
+  },
+  "homepage": "https://github.com/tpcw-dev/tpcw-quant",
+  "repository": "https://github.com/tpcw-dev/tpcw-quant",
+  "license": "MIT",
+  "keywords": [
+    "tpcw-quant",
+    "quant",
+    "atlas",
+    "bayes",
+    "grok"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "quant",
+    "portfolio",
+    "crypto",
+    "prediction-markets",
+    "grok"
+  ],
+  "skills": "./skills/"
+}

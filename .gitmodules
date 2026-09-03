@@ -1,0 +1,3 @@
+[submodule "vendor/llmquant-skills"]
+	path = vendor/llmquant-skills
+	url = https://github.com/LLMQuant/skills.git

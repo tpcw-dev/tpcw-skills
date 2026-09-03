@@ -14,22 +14,43 @@ See their [LICENSE](https://github.com/LLMQuant/skills/blob/master/LICENSE). The
 
 ## Status
 
-Not implemented yet. Grill is on Quant ticket **quant-38**.
+v1 locked 2026-09-03 (quant-38 grill). Parent `skills/tpcw-quant/SKILL.md` is a Grok plugin. Catalog is a pinned git submodule at `vendor/llmquant-skills`.
 
-- Thin in-house parent `SKILL.md` (guide: which hat, then which `llmquant-*` category).
+- Thin in-house parent `SKILL.md` (hat, then one `llmquant-*` workflow file).
 - Reference [LLMQuant/skills](https://github.com/LLMQuant/skills) via git submodule (pin a commit; not a port).
 - Do **not** adopt [LLMQuant/quant-mind](https://github.com/LLMQuant/quant-mind) as the runtime.
 - Launch remains `grok -p` from the project cwd. Not a standing Grok Bot chat skill.
+- No LLMQuant Data MCP in v1. Missing-data fallback. millie-specific workflow is a later leaf.
+
+## Install
+
+Grok's plugin clone may not fetch submodules. Install from a checkout that already has the catalog.
+
+```bash
+git clone --recurse-submodules https://github.com/tpcw-dev/tpcw-quant.git
+cd tpcw-quant
+git submodule update --init --recursive
+grok plugin install "$(pwd)" --trust
+```
+
+Enable it next to pstack in `~/.grok/config.toml`:
+
+```toml
+[plugins]
+enabled = ["pstack", "tpcw-quant"]
+```
+
+`grok plugin list` should show `tpcw-quant`. `grok inspect` should list skill `tpcw-quant` from the plugin. `/llmquant-crypto` and the other catalog folders must **not** appear as slash commands.
 
 ## Launch
 
-Skill name and repo name are both **tpcw-quant**.
+Skill name and repo name are both **tpcw-quant**. Explicit invoke only.
 
 ```bash
 grok --always-approve -p "Use tpcw-quant. <ticket: goal, constraints, done-check>."
 ```
 
-Flags before `-p`. Code tickets still use **poteto-mode**. Literature tickets still use **/deep-research**. This parent is for Atlas/Bayes *quant* tasks.
+Flags before `-p`. Code tickets still use **poteto-mode**. Literature tickets still use **/deep-research**. This parent is for Atlas/Bayes *quant* research.
 
 ## What this is not
 
