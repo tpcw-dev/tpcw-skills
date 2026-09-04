@@ -1,17 +1,20 @@
 ---
-name: tpcw-quant
-description: Parent router for Atlas long-term portfolio research and Bayes mid/short trading-bot research. Use when the user says tpcw-quant, /tpcw-quant, or Use tpcw-quant. Not for engineering (poteto-mode), literature (/deep-research), or live trading.
+name: tpcw-skills
+description: Parent router for Atlas long-term portfolio research and Bayes mid/short trading-bot research. Use when the user says tpcw-skills, /tpcw-skills, or Use tpcw-skills. Not for engineering (poteto-mode), literature (/deep-research), or live trading.
 disable-model-invocation: true
 license: MIT
 ---
 
-# tpcw-quant
+> Former plugin/repo name: `tpcw-quant`. Invoke `/tpcw-skills` or `Use tpcw-skills.` (not `/tpcw-quant`).
 
-Meta skill for shop quant research. One parent for Atlas and Bayes. Launch `grok --always-approve -p "Use tpcw-quant. <ticket: goal, constraints, done-check>."`
+
+# tpcw-skills
+
+Meta skill for shop quant research. One parent for Atlas and Bayes. Launch `grok --always-approve -p "Use tpcw-skills. <ticket: goal, constraints, done-check>."`
 
 Category playbooks live in this plugin at `vendor/llmquant-skills` (pinned [LLMQuant/skills](https://github.com/LLMQuant/skills) submodule). They are files this parent opens. They are not first-class slash commands.
 
-If `vendor/llmquant-skills/skills` is missing, stop. Tell the operator to run `git submodule update --init` in the tpcw-quant checkout and reinstall the plugin. Do not fetch workflow text from the network as a substitute.
+If `vendor/llmquant-skills/skills` is missing, stop. Tell the operator to run `git submodule update --init` in the tpcw-skills checkout and reinstall the plugin. Do not fetch workflow text from the network as a substitute.
 
 ## Bounce first
 

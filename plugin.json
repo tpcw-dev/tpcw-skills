@@ -1,16 +1,17 @@
 {
-  "name": "tpcw-quant",
-  "displayName": "tpcw-quant",
-  "version": "0.1.0",
-  "description": "Parent skill for Atlas long-term portfolio research and Bayes mid/short bot research. Routes to LLMQuant workflow files. Not live trading.",
+  "name": "tpcw-skills",
+  "displayName": "tpcw-skills",
+  "version": "0.1.1",
+  "description": "Inner-loop CLI skills parent (was tpcw-quant): Atlas/Bayes quant playbooks plus room for personal/dev skills. Routes to LLMQuant workflows. Not live trading.",
   "author": {
     "name": "tpcw-dev",
-    "url": "https://github.com/tpcw-dev/tpcw-quant"
+    "url": "https://github.com/tpcw-dev/tpcw-skills"
   },
-  "homepage": "https://github.com/tpcw-dev/tpcw-quant",
-  "repository": "https://github.com/tpcw-dev/tpcw-quant",
+  "homepage": "https://github.com/tpcw-dev/tpcw-skills",
+  "repository": "https://github.com/tpcw-dev/tpcw-skills",
   "license": "MIT",
   "keywords": [
+    "tpcw-skills",
     "tpcw-quant",
     "quant",
     "atlas",

@@ -1,4 +1,6 @@
-# tpcw-quant
+# tpcw-skills
+
+Former GitHub/plugin name: **tpcw-quant** (repo redirected).
 
 Thin **parent skill** for [Grok Build](https://github.com/xai-org) (`grok -p`): a poteto-mode analog that bundles quant playbooks and routes Atlas (long-term portfolio research) and Bayes (mid/short trading bots) to the right sub-skill.
 
@@ -14,7 +16,7 @@ See their [LICENSE](https://github.com/LLMQuant/skills/blob/master/LICENSE). The
 
 ## Status
 
-v1 locked 2026-09-03 (quant-38 grill). Parent `skills/tpcw-quant/SKILL.md` is a Grok plugin. Catalog is a pinned git submodule at `vendor/llmquant-skills`.
+v1 locked 2026-09-03 (quant-38 grill). Parent `skills/tpcw-skills/SKILL.md` is a Grok plugin. Catalog is a pinned git submodule at `vendor/llmquant-skills`.
 
 - Thin in-house parent `SKILL.md` (hat, then one `llmquant-*` workflow file).
 - Reference [LLMQuant/skills](https://github.com/LLMQuant/skills) via git submodule (pin a commit; not a port).
@@ -27,8 +29,8 @@ v1 locked 2026-09-03 (quant-38 grill). Parent `skills/tpcw-quant/SKILL.md` is a 
 Grok's plugin clone may not fetch submodules. Install from a checkout that already has the catalog.
 
 ```bash
-git clone --recurse-submodules https://github.com/tpcw-dev/tpcw-quant.git
-cd tpcw-quant
+git clone --recurse-submodules https://github.com/tpcw-dev/tpcw-skills.git
+cd tpcw-skills
 git submodule update --init --recursive
 grok plugin install "$(pwd)" --trust
 ```
@@ -37,17 +39,17 @@ Enable it next to pstack in `~/.grok/config.toml`:
 
 ```toml
 [plugins]
-enabled = ["pstack", "tpcw-quant"]
+enabled = ["pstack", "tpcw-skills"]
 ```
 
-`grok plugin list` should show `tpcw-quant`. `grok inspect` should list skill `tpcw-quant` from the plugin. `/llmquant-crypto` and the other catalog folders must **not** appear as slash commands.
+`grok plugin list` should show `tpcw-skills`. `grok inspect` should list skill `tpcw-skills` from the plugin. `/llmquant-crypto` and the other catalog folders must **not** appear as slash commands.
 
 ## Launch
 
-Skill name and repo name are both **tpcw-quant**. Explicit invoke only.
+Skill name and repo name are both **tpcw-skills** (formerly tpcw-quant). Explicit invoke only.
 
 ```bash
-grok --always-approve -p "Use tpcw-quant. <ticket: goal, constraints, done-check>."
+grok --always-approve -p "Use tpcw-skills. <ticket: goal, constraints, done-check>."
 ```
 
 Flags before `-p`. Code tickets still use **poteto-mode**. Literature tickets still use **/deep-research**. This parent is for Atlas/Bayes *quant* research.
